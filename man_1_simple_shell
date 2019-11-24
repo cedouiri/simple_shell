@@ -1,0 +1,22 @@
+.TH man 1 "11 november 2019" "0.1" "simple shell man page"
+.SH NAME
+.B simple shell -
+A simple shell based off of sh or bash.
+.SH SYNOPSIS
+hsh : has a few simple commands;
+.SH DESCRIPTION
+ a UNIX command line interpreter , a shell recreated as a project for holberton school
+.SH BUILT-INS
+.br
+1. help		lists available commands.
+.br
+2. exit		exits the shell.
+.br
+3. cd           changes directory.
+.br
+.SH SEE ALSO
+.I sh, bash, exeev, execbp, execve.
+.SH BUGS
+to be added.
+.SH AUTHOR
+see AUTHORS file for more details
