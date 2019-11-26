@@ -6,7 +6,7 @@
 *
 * Return: Always 0.
 **/
-int main(void)
+int parent(void)
 {
 	pid_t parent_pid;
 
