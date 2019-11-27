@@ -17,7 +17,7 @@ int WordCount(char *str);
 int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
 char *_memcpy(char *dest, char *src, unsigned int n);
-char *_getenv(const char *name, char **e);
+char *_getenv(char *name, char **e);
 char *_strcat(char *dest, char *src);
 void _path(char **ch, char **e);
 #endif

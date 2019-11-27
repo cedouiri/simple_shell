@@ -6,7 +6,7 @@
 * @e: environment variable list
 * Return: pointer to env var
 **/
-char *_getenv(const char *name, char **e)
+char *_getenv(char *name, char **e)
 {
 	int i, j;
 	int result, length;
@@ -14,7 +14,7 @@ char *_getenv(const char *name, char **e)
 	i = j = 0;
 	while (e[i] != NULL)
 	{
-		result = _strcmp(name, (const char *)e[i]);
+		result = _strcmp(name, (char *)e[i]);
 		if (result == 1)
 		{
 			length = _strlen(e[i]);
