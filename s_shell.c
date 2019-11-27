@@ -2,19 +2,19 @@
 
 /**
 * main - Entry point
-*
-*
+* @ac: number of arguments of av
+* @av: array of arguments
 * Return: always 0
 **/
 
-int main(void)
+int main(int ac, char *av[], char **e)
 {
 	char *p = NULL;
 	char **str = NULL;
+	int stat, length;
 	size_t size = 0;
-	int length;
-	int stat;
 	pid_t ppid;
+	(void)ac;
 
 	while (1)
 	{
@@ -31,6 +31,7 @@ int main(void)
 			}
 			p[length - 1] = '\0';
 			str = str_tow(p);
+			_path(str, e);
 			if (execve(str[0], str, NULL) == -1)
 				perror("Error\n");
 		}
