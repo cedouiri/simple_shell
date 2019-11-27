@@ -7,7 +7,7 @@ Its built and tested on virtruel box via vagrant image ubuntu 14.04 and compiled
 ## How to Install
 
 
-### Clone the repo below
+## Clone the repo below
 https://github.com/hafdhisofien/simple_shell
 
 
