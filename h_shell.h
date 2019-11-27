@@ -23,8 +23,6 @@ typedef struct builtins
 	int (*p_f)(char **as, char **e);
 } _built;
 
-int child_pid(void);
-int parent(void);
 char **str_tow(char *str);
 void cpString(int e, char *s, char **wb);
 void GetWord(char **w, char *str);

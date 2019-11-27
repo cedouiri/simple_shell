@@ -11,7 +11,6 @@ int built_check(char **as, char **e)
 		{"env", print_env},
 		{"exit", exit_s},
 		{NULL, NULL}
-	
 		};
 	int i;
 
