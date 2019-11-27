@@ -4,7 +4,7 @@
  * free_as - free amounts of strings
  * @stat: status
  * @n: number of strings to free
- * Return: nothing
+ * Return: nothing to return
  */
 
 void free_as(int stat, const unsigned int n, ...)
