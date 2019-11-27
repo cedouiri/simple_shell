@@ -7,6 +7,7 @@
 #include <sys/wait.h>
 #include <stdarg.h>
 #include <signal.h>
+
 int child_pid(void);
 int parent(void);
 char **str_tow(char *str);
@@ -17,5 +18,6 @@ int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
 char *_memcpy(char *dest, char *src, unsigned int n);
 char *_getenv(const char *name);
+char *_strcat(char *dest, char *src);
 
 #endif
