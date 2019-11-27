@@ -6,55 +6,46 @@
 * @av: array of arguments
 * Return: always 0
 **/
-
 int main(int ac, char *av[], char **e)
 {
 	char *p = NULL;
 	char **str = NULL;
-	int stat, length, n = 0;
-	size_t size = 0;
+	int stat;
 	pid_t ppid;
 	(void)ac;
 
-	if (ac > 1)
+	while (1)
 	{
-		if (execve(av[1], av + 1, NULL) == -1)
+		p = NULL;
+		signal(SIGINT, sig_hand);
+		if (prompt(&p) == -1)
+			continue;
+		str = str_tow(p);
+		if (!str)
 		{
-			perror("./shell");
-			exit(0);
+			free_as(99, 1, p);
+			continue;
 		}
-	}
-	while (!n)
-	{
-		if (isatty(fileno(stdin)))
-			write(2, "simple-shell$", 6);
+		free_as(99, 1, p);
+		if (built_check(str, e))
+			continue;
 		ppid = fork();
 		if (ppid == 0)
 		{
-			if ((length = getline(&p, &size, stdin)) == -1)
-				n = 1;
-			p[length - 1] = '\0';
-			if (*p == '\0' || (!(str = str_tow(p))))
-			{
-				free(p);
-				exit(0);
-			}
 			_path(str, e);
-			if (str == NULL)
-				perror("Error: string is NULL\n");
 			if (execve(str[0], str, NULL) == -1)
 			{
-				perror("./shell\n");
+				perror(*av);
+				free_a(str);
 				exit(0);
 			}
 		}
 		else
 		{
-			wait(&stat);
-			if (stat !=0 || n)
+			free_a(str);
+			if (!wait(&stat))
 				break;
 		}
 	}
-	printf("Ending \n");
 	return (0);
 }
