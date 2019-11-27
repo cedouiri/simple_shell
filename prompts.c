@@ -12,7 +12,7 @@ int prompt(char **p)
 	int length;
 
 	if (isatty(STDIN_FILENO))
-		write(STDOUT_FILENO, "simple_shell$ ", 6);
+		write(STDOUT_FILENO, "shell$ ", 6);
 	length = getline(p, &size, stdin);
 	if (length == EOF)
 		free_as(-1, 1, *p);
