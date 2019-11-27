@@ -14,7 +14,7 @@
  * @p_f: pointer to builtin func
  *
  *
- *Description: struct for builtin func and command 
+ *Description: struct for builtin func and command
  */
 
 typedef struct builtins
@@ -42,5 +42,5 @@ void sig_hand(int sig_n);
 int _atoi(char *ch);
 int exit_s(char **as, char **e);
 int built_check(char **as, char **e);
-
+int prompt(char **p);
 #endif
