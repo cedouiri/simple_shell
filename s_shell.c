@@ -4,6 +4,7 @@
 * main - Entry point
 * @ac: number of arguments of av
 * @av: array of arguments
+* @e: str
 * Return: always 0
 **/
 int main(int ac, char *av[], char **e)
