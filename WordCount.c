@@ -29,7 +29,7 @@ int WordCount(char *str)
 		}
 		else
 			find = 1;
-		i += 1;	
+		i += 1;
 	}
 	return (count_w);
 }
