@@ -41,8 +41,5 @@ int _atoi(char *ch);
 int exit_s(char **as, char **e);
 int built_check(char **as, char **e);
 int prompt(char **p);
-<<<<<<< HEAD
 
-=======
->>>>>>> 9d4bc37beec597cd4bde78d70700307ff5170719
 #endif
