@@ -14,7 +14,7 @@
  * @p_f: pointer to builtin func
  *
  *
- *Description: struct for builtin func and command 
+ *Description: struct for builtin func and command
  */
 
 typedef struct builtins
