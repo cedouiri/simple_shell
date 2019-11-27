@@ -20,7 +20,7 @@ void free_as(int stat, const unsigned int n, ...)
 		free(p);
 	}
 	va_end(args);
-	if (stat == 99)
+	if (status == 99)
 		return;
 	exit(0);
 }
