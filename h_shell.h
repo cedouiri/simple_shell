@@ -33,7 +33,7 @@ int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
 char *_memcpy(char *dest, char *src, unsigned int n);
 char *_getenv(char *name, char **e);
-char *_strcat(char *s1 char *s2);
+char *_strcat(char *s1, char *s2);
 int print_env(char **as, char **e);
 void _path(char **ch, char **e);
 void free_a(char **a);
@@ -42,5 +42,6 @@ void sig_hand(int sig_n);
 int _atoi(char *ch);
 int exit_s(char **as, char **e);
 int built_check(char **as, char **e);
+int prompt(char **p);
 
 #endif
