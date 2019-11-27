@@ -1,7 +1,7 @@
 #include "h_shell.h"
 
 /**
-* free_a - free an array
+* free_a - free array
 * @a: pointer that point to array
 * Return: nothing
 **/
